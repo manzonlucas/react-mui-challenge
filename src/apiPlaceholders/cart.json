@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "My christmas pack",
+    "qty": 50,
+    "content": [
+      {
+        "name": "Cardboard box",
+        "description": "container"
+      },
+      {
+        "name": "Unisex short sleeve T-shirt",
+        "description": "green, small"
+      },
+      {
+        "name": "Basic bottle",
+        "description": "blue"
+      }
+    ],
+    "price": 71.20
+  },
+  {
+    "id": 2,
+    "name": "Basic T-shirt",
+    "qty": 10,
+    "price": 13.50
+  },
+  {
+    "id": 3,
+    "name": "Woman bottle",
+    "qty": 20,
+    "price": 36.50
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Unisex short sleeve T-shirt",
+    "price": "$10 - $24",
+    "minimum": 24
+  },
+  {
+    "id": 2,
+    "name": "Unisex short sleeve T-shirt",
+    "price": "$10 - $24",
+    "minimum": 24
+  },
+  {
+    "id": 3,
+    "name": "Unisex short sleeve T-shirt",
+    "price": "$10 - $24",
+    "minimum": 24
+  },
+  {
+    "id": 4,
+    "name": "Unisex short sleeve T-shirt",
+    "price": "$10 - $24",
+    "minimum": 24
+  }
+]

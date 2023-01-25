@@ -1,8 +1,12 @@
+import Cart from './components/Cart';
 import Header from './components/Header';
 
 function App() {
   return (
-    <Header />
+    <>
+      <Header />
+      <Cart />
+    </>
   )
 }
 
