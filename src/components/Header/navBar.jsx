@@ -1,12 +1,14 @@
 export default function NavBar() {
+
+  const navLinks = ['All products', 'Packaging', 'Drinkware', 'Apparel', 'Notebooks', 'Backpacks'];
+
   return (
-    <nav className="h-16 bg-slate-200 text-slate-700">
-      <a href="/">All products</a>
-      <a href="/">Packaging</a>
-      <a href="/">Drinkware</a>
-      <a href="/">Apparel</a>
-      <a href="/">Notebooks</a>
-      <a href="/">Backpacks</a>
+    <nav className="py-3 px-20 bg-slate-200 text-slate-700">
+      {navLinks.map(link => {
+        return (
+          <a href="/" className="p-4">{link}</a>
+        )
+      })}
     </nav>
   )
 }

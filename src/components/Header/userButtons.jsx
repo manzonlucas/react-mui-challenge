@@ -3,7 +3,7 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 export default function UserButtons() {
   return (
-    <section className="flex justify-around text-white py-2 mx-12">
+    <section className="flex justify-around text-white py-2">
       <a href="/" className='mx-2 flex align-center space-around'>
         <PersonIcon />
         <span>Sign In</span>
