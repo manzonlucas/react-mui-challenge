@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 
 export default function Summary() {
   return (
-    <section className="w-1/4 flex flex-col justify-between gap-2">
+    <section className="w-1/4 flex flex-col justify-between gap-2 h-60">
       <h2 className="text-xl font-bold mr-1">Order summary</h2>
 
       <div className="flex justify-between text-gray-500">
