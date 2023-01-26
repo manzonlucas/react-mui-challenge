@@ -1,7 +1,7 @@
 export default function RecommendationItem() {
   return (
     <article className="flex flex-col w-1/5">
-      <div className="aspect-square bg-slate-200">    </div>
+      <div className="aspect-square bg-[#E6E8E9]">    </div>
       <div>
         <p className="font-bold">Unisex Short Sleeve T-Shirt</p>
         <div className="flex justify-between">
