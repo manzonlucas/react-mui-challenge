@@ -2,24 +2,26 @@ import { Button } from "@mui/material";
 
 export default function Summary() {
   return (
-    <section className="w-1/4">
+    <section className="w-1/4 flex flex-col justify-between gap-2">
       <h2 className="text-xl font-bold mr-1">Order summary</h2>
 
-      <div>
+      <div className="flex justify-between text-gray-500">
         <h3>Number of items</h3>
         <span>3</span>
       </div>
 
-      <div>
+      <hr />
+
+      <div className="flex justify-between font-bold">
         <h3>Total</h3>
         <span>$$$</span>
       </div>
 
-      <div>
+      <div className="flex flex-col">
         <Button
           variant="contained"
           sx={{
-            color: '', backgroundColor: '#3A4451', textTransform: 'none', "&.MuiButtonBase-root:hover": { bgcolor: "#3A4451" }
+            color: '', backgroundColor: '#3A4451', textTransform: 'none', "&.MuiButtonBase-root:hover": { bgcolor: "#3A4451" }, marginBottom: '10px'
           }} >
           Proceed to checkout
         </Button>
