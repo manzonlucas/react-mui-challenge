@@ -5,7 +5,7 @@ export default function Item() {
   return (
     <>
       <article className="flex gap-4">
-        <div className='w-48 h-40 bg-slate-200'></div>
+        <div className='w-48 aspect-square bg-slate-200'></div>
         <section className='w-full flex justify-between'>
           <div className="flex flex-col gap-2">
             <h3 className="font-bold">Title</h3>
