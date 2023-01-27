@@ -1,4 +1,3 @@
-import { MenuItem } from '@mui/material';
 import NativeSelect from '@mui/material/NativeSelect';
 
 export default function LangAndCopyright() {
