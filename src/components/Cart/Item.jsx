@@ -2,14 +2,19 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useEffect, useState } from 'react';
 
-export default function Item({ item, removeElement }) {
-  const numArr = Array.from({ length: 50 }, (_, i) => i + 1);
+export default function Item({ item, removeElement, getQty }) {
+
+  const numArray = [];
+  for (let i = 0; i <= 50; i++) {
+    numArray.push(i);
+  }
 
   const [totalItemPrice, setTotalItemPrice] = useState(item.price);
   const [qty, setQty] = useState(1);
 
   useEffect(() => {
-    setTotalItemPrice((item.price * qty));
+    setTotalItemPrice(item.price * qty);
+    getQty(qty)
   }, [qty])
 
   function handleQtyChange(e) {
@@ -33,7 +38,7 @@ export default function Item({ item, removeElement }) {
             <div className='flex'>
               <label htmlFor={`qty-id${item.id}`}>Quantity: </label>
               <select name="qty" id={`qty-id${item.id}`} onChange={handleQtyChange}>
-                {numArr.map((num, i) => {
+                {numArray.map((num, i) => {
                   return (<option value={num} key={i}>{num}</option>)
                 })}
               </select>
@@ -70,11 +75,11 @@ export default function Item({ item, removeElement }) {
             </p>
           </div>
 
-          {/* <div >
+          <div >
             <p className="font-bold text-right">{`$ ${item.price.toFixed(2)}`}</p>
             <span>Total:</span>
             <span className="font-bold ml-1">{`$ ${totalItemPrice.toFixed(2)}`}</span>
-          </div> */}
+          </div>
         </section>
       </article>
 
