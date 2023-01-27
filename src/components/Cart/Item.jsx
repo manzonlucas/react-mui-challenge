@@ -2,19 +2,18 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useEffect, useState } from 'react';
 
-export default function Item({ item, removeElement, getQty }) {
+export default function Item({ item, removeElement }) {
 
   const numArray = [];
   for (let i = 0; i <= 50; i++) {
     numArray.push(i);
   }
 
-  const [totalItemPrice, setTotalItemPrice] = useState(item.price);
-  const [qty, setQty] = useState(1);
+  const [totalItemPrice, setTotalItemPrice] = useState(0);
+  const [qty, setQty] = useState(0);
 
   useEffect(() => {
     setTotalItemPrice(item.price * qty);
-    getQty(qty)
   }, [qty])
 
   function handleQtyChange(e) {
