@@ -33,17 +33,17 @@ export default function Item({ item, removeElement }) {
             <div className='flex'>
               <label htmlFor={`qty-id${item.id}`}>Quantity: </label>
               <select name="qty" id={`qty-id${item.id}`} onChange={handleQtyChange}>
-                {numArr.map(num => {
-                  return (<option value={num}>{num}</option>)
+                {numArr.map((num, i) => {
+                  return (<option value={num} key={i}>{num}</option>)
                 })}
               </select>
             </div>
 
             {item.content ?
               <ul className="list-disc ml-6">
-                {item.content.map(content => {
+                {item.content.map((content, i) => {
                   return (
-                    <li>
+                    <li key={i}>
                       <span>{content.name}</span>
                       <span className="text-gray-500 ml-1">({content.description})</span>
                     </li>
@@ -70,11 +70,11 @@ export default function Item({ item, removeElement }) {
             </p>
           </div>
 
-          <div >
+          {/* <div >
             <p className="font-bold text-right">{`$ ${item.price.toFixed(2)}`}</p>
             <span>Total:</span>
             <span className="font-bold ml-1">{`$ ${totalItemPrice.toFixed(2)}`}</span>
-          </div>
+          </div> */}
         </section>
       </article>
 
