@@ -1,20 +1,20 @@
 import { Button } from "@mui/material";
 
-export default function Summary() {
+export default function Summary({ totalItems, totalPrice }) {
   return (
     <section className="w-1/4 flex flex-col justify-between gap-2 h-60">
       <h2 className="text-xl font-bold mr-1">Order summary</h2>
 
       <div className="flex justify-between text-gray-500">
         <h3>Number of items</h3>
-        <span>3</span>
+        <span>{totalItems}</span>
       </div>
 
       <hr />
 
       <div className="flex justify-between font-bold">
         <h3>Total</h3>
-        <span>$$$</span>
+        <span>{`$${totalPrice}`}</span>
       </div>
 
       <div className="flex flex-col">
