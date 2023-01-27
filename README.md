@@ -1,6 +1,6 @@
 # react-mui-challenge
-Challenge posted by a company for a front end developer position.
-Single page app based on the figma model in the repo. 
+Challenge requested by a company for a front end developer position.
+Web page based on the figma prototype in the repo.
 React.js and Material-UI was required, plus I choose to use TailwindCSS for styles.
 
 Expected features:
@@ -11,3 +11,13 @@ Expected features:
 Requirements:
 - Use Material UI ver. 5
 - You have 1 week to complete this challenge
+ 
+ <hr/>
+
+First, to download the dependencies, locate in the project directory and run:
+
+### `npm i`
+
+Then, to run the project:
+
+### `npm start`
