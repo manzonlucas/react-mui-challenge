@@ -5,30 +5,30 @@ export default function LangAndCopyright() {
     <section className="flex justify-between text-sm">
       <p>© 2023 Customer Products. All rights reserved.</p>
       <div className="flex gap-10">
-        <p>Region:
+        <div>Region:
           <NativeSelect
             sx={{
               fontSize: 'inherit',
               paddingLeft: '6px'
             }}
             children=
-            {[<option> United States</option>,
-            <option>Argentina</option>,
-            <option>Mexico</option>]}
+            {[<option key={1}> United States</option>,
+            <option key={2}>Argentina</option>,
+            <option key={3}>Mexico</option>]}
           />
-        </p>
+        </div>
 
-        <p>Language:
+        <div>Language:
           <NativeSelect
             sx={{
               fontSize: 'inherit',
               paddingLeft: '6px'
             }}
             children={[
-              <option>English</option>,
-              <option>Spanish</option>
+              <option key={1}>English</option>,
+              <option key={2}>Spanish</option>
             ]} />
-        </p>
+        </div>
       </div>
     </section>
   )

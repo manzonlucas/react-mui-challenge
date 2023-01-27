@@ -1,4 +1,5 @@
 import Item from "./Item";
+import cart from '../../apiPlaceholders/cart.json';
 
 export default function ItemList() {
   return (
@@ -8,8 +9,9 @@ export default function ItemList() {
         <span>(3)</span>
       </div>
 
-      <Item />
-      <Item />
+      {cart.map(data => {
+        return <Item data={data} key={data.id} />
+      })}
     </section>
   )
 }
