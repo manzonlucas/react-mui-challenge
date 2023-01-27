@@ -1,7 +1,17 @@
 import Item from "./Item";
 import cart from '../../apiPlaceholders/cart.json';
+import { useState } from "react";
 
 export default function ItemList() {
+
+  const [items, setItems] = useState(cart);
+
+  function removeElement(id) {
+    setItems(items.filter(item => {
+      return item.id !== id
+    }));
+  }
+
   return (
     <section className="w-3/4 flex flex-col gap-6">
       <div className="flex items-center">
@@ -9,8 +19,8 @@ export default function ItemList() {
         <span>(3)</span>
       </div>
 
-      {cart.map(data => {
-        return <Item data={data} key={data.id} />
+      {items.map(data => {
+        return <Item item={data} key={data.id} removeElement={removeElement} />
       })}
     </section>
   )

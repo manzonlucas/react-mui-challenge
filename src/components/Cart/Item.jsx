@@ -2,18 +2,22 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useEffect, useState } from 'react';
 
-export default function Item({ data }) {
+export default function Item({ item, removeElement }) {
   const numArr = Array.from({ length: 50 }, (_, i) => i + 1);
 
-  const [totalItemPrice, setTotalItemPrice] = useState(data.price);
+  const [totalItemPrice, setTotalItemPrice] = useState(item.price);
   const [qty, setQty] = useState(1);
 
   useEffect(() => {
-    setTotalItemPrice((data.price * qty));
+    setTotalItemPrice((item.price * qty));
   }, [qty])
 
   function handleQtyChange(e) {
     setQty(e.target.value);
+  }
+
+  function onClickRemove() {
+    removeElement(item.id);
   }
 
   return (
@@ -23,21 +27,21 @@ export default function Item({ data }) {
         <section className='w-full flex justify-between'>
           <div className="flex flex-col gap-2">
             <h3 className="font-bold">
-              {data.name}
+              {item.name}
             </h3>
 
             <div className='flex'>
-              <label htmlFor={`qty-id${data.id}`}>Quantity: </label>
-              <select name="qty" id={`qty-id${data.id}`} onChange={handleQtyChange}>
+              <label htmlFor={`qty-id${item.id}`}>Quantity: </label>
+              <select name="qty" id={`qty-id${item.id}`} onChange={handleQtyChange}>
                 {numArr.map(num => {
                   return (<option value={num}>{num}</option>)
                 })}
               </select>
             </div>
 
-            {data.content ?
+            {item.content ?
               <ul className="list-disc ml-6">
-                {data.content.map(content => {
+                {item.content.map(content => {
                   return (
                     <li>
                       <span>{content.name}</span>
@@ -49,7 +53,7 @@ export default function Item({ data }) {
               : ''}
 
             <p className="text-xs">
-              {data.content ?
+              {item.content ?
                 <>
                   <span>
                     <EditIcon fontSize='string' />
@@ -59,7 +63,7 @@ export default function Item({ data }) {
                 </>
                 : ''}
 
-              <span>
+              <span onClick={onClickRemove} className='cursor-pointer'>
                 <DeleteIcon fontSize='string' />
                 Remove
               </span>
@@ -67,7 +71,7 @@ export default function Item({ data }) {
           </div>
 
           <div >
-            <p className="font-bold text-right">{`$ ${data.price.toFixed(2)}`}</p>
+            <p className="font-bold text-right">{`$ ${item.price.toFixed(2)}`}</p>
             <span>Total:</span>
             <span className="font-bold ml-1">{`$ ${totalItemPrice.toFixed(2)}`}</span>
           </div>
