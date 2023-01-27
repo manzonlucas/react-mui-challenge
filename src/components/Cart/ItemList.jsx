@@ -1,30 +1,6 @@
 import Item from "./Item";
-import cart from '../../apiPlaceholders/cart.json';
-import { useState } from "react";
 
-export default function ItemList() {
-
-  const [items, setItems] = useState(cart);
-  const [totalItems, setTotalItems] = useState(0);
-
-  function removeElement(id) {
-    setItems(items.filter(item => {
-      return item.id !== id
-    }));
-  };
-
-  function handleChangeItem(id, qty) {
-    let accQty = 0;
-
-    items.forEach(item => {
-      if (item.id === id) {
-        item.qty = parseInt(qty);
-      }
-
-      accQty += item.qty;
-      setTotalItems(accQty);
-    });
-  }
+export default function ItemList({ items, totalItems, removeElement, handleChangeItem }) {
 
   return (
     <section className="w-3/4 flex flex-col gap-6">
