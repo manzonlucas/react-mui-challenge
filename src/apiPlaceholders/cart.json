@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "My christmas pack",
-    "qty": 50,
+    "qty": 0,
     "content": [
       {
         "name": "Cardboard box",
@@ -22,13 +22,13 @@
   {
     "id": 2,
     "name": "Basic T-shirt",
-    "qty": 10,
+    "qty": 0,
     "price": 13.50
   },
   {
     "id": 3,
     "name": "Woman bottle",
-    "qty": 20,
+    "qty": 0,
     "price": 36.50
   }
 ]
